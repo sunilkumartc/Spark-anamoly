@@ -1,0 +1,96 @@
+2018-03-26 19:47:05,662 - [INFO] - from play in pool-4-thread-2 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2018-03-26 20:05:06,497 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2018-03-26 20:06:06,928 - [ERROR] - from org.apache.spark.executor.Executor in Executor task launch worker-0 
+Exception in task ID 2
+java.io.StreamCorruptedException: invalid type code: AC
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1596) ~[na:1.8.0_151]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:428) ~[na:1.8.0_151]
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:63) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.serializer.DeserializationStream$$anon$1.getNext(Serializer.scala:125) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.util.NextIterator.hasNext(NextIterator.scala:71) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.storage.BlockManager$LazyProxyIterator$1.hasNext(BlockManager.scala:1031) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371) ~[scala-library-2.10.4.jar:na]
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:30) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.Aggregator.combineCombinersByKey(Aggregator.scala:87) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$combineByKey$3.apply(PairRDDFunctions.scala:101) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$combineByKey$3.apply(PairRDDFunctions.scala:100) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD$$anonfun$14.apply(RDD.scala:582) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD$$anonfun$14.apply(RDD.scala:582) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:35) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:262) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:229) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:111) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.scheduler.Task.run(Task.scala:51) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:183) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+
+2018-03-26 20:06:06,919 - [ERROR] - from org.apache.spark.executor.Executor in Executor task launch worker-0 
+Exception in task ID 2
+java.io.StreamCorruptedException: invalid type code: AC
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1596) ~[na:1.8.0_151]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:428) ~[na:1.8.0_151]
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:63) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.serializer.DeserializationStream$$anon$1.getNext(Serializer.scala:125) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.util.NextIterator.hasNext(NextIterator.scala:71) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.storage.BlockManager$LazyProxyIterator$1.hasNext(BlockManager.scala:1031) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371) ~[scala-library-2.10.4.jar:na]
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:30) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.Aggregator.combineCombinersByKey(Aggregator.scala:87) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$combineByKey$3.apply(PairRDDFunctions.scala:101) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$combineByKey$3.apply(PairRDDFunctions.scala:100) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD$$anonfun$14.apply(RDD.scala:582) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD$$anonfun$14.apply(RDD.scala:582) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:35) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:262) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:229) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:111) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.scheduler.Task.run(Task.scala:51) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:183) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+
+2018-03-26 20:06:06,919 - [ERROR] - from org.apache.spark.executor.Executor in Executor task launch worker-1 
+Exception in task ID 2
+java.io.StreamCorruptedException: invalid type code: AC
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1596) ~[na:1.8.0_151]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:428) ~[na:1.8.0_151]
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:63) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.serializer.DeserializationStream$$anon$1.getNext(Serializer.scala:125) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.util.NextIterator.hasNext(NextIterator.scala:71) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.storage.BlockManager$LazyProxyIterator$1.hasNext(BlockManager.scala:1031) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371) ~[scala-library-2.10.4.jar:na]
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:30) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.Aggregator.combineCombinersByKey(Aggregator.scala:87) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$combineByKey$3.apply(PairRDDFunctions.scala:101) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$combineByKey$3.apply(PairRDDFunctions.scala:100) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD$$anonfun$14.apply(RDD.scala:582) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD$$anonfun$14.apply(RDD.scala:582) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:35) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:262) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:229) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:111) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.scheduler.Task.run(Task.scala:51) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:183) ~[spark-core_2.10-1.0.1.jar:1.0.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+
+2018-03-26 20:06:07,285 - [ERROR] - from org.apache.spark.scheduler.TaskSetManager in Result resolver thread-3 
+Task 0.0:0 failed 1 times; aborting job
+
+2018-03-26 20:06:07,293 - [ERROR] - from org.apache.spark.scheduler.TaskSetManager in Result resolver thread-3 
+Task 0.0:0 failed 1 times; aborting job
+
+2018-03-26 20:06:07,299 - [ERROR] - from org.apache.spark.scheduler.TaskSetManager in Result resolver thread-3 
+Task 0.0:0 failed 1 times; aborting job
+
